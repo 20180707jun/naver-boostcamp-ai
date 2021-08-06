@@ -21,7 +21,7 @@
 ![image](https://user-images.githubusercontent.com/50571795/128471985-fa1b87f7-dfc2-478a-bc4e-45c71e2ac7b1.png)  
 forward가 위와 같이 일어나기 때문에 백워드는 아래와 같이 일어난다.  
 ![image](https://user-images.githubusercontent.com/50571795/128472186-60c7e9de-5037-4160-9014-e410388b0d4c.png)  
-웨이트에 대한 갱신은 아래와 같다.
+웨이트에 대한 갱신은 아래와 같다.  
 ![image](https://user-images.githubusercontent.com/50571795/128472388-493c8c07-f348-4e09-853e-073696a8abfe.png)
 
 # RNN 첫걸음
