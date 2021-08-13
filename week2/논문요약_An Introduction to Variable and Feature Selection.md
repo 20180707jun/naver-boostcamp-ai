@@ -93,9 +93,3 @@ An Introduction to Variable and Feature Selection
 - 어떤 문제를 풀기위함 ?
 - 기존 방법 ?
 - 이 논문에서는 ?
----
-
-- fs의 목적은 3가지이다. 
-  - predictor의 성능을 높이기 위함
-  - 좀 더 빠르고, 효율적인 predictor를 만들기 위함
-  - 데이터를 생성한 underlying process를 더 잘 이해하기 위함
