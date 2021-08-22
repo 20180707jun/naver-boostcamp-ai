@@ -1,26 +1,4 @@
 # Enriching Word Vectors with Subword Information (Fast Text)
-## Abstract
-- 너무 많은 단어들이 있다는 것이 기존의 한계점
-- 앞으로 제시할 모델에서는 skipgram을 사용
-- 이 모델은 빠르다.
-- training data에 없던 데이터도 계산이 가능하다.
-- 
-
-
-참고
-- CBOW : 주변 단어들을 통해서 중간단어를 예측하는 모델
-- Skip-Gram : 중간단어를 통해서 주변단어를 예측하는 모델
-
-### 3.1 General model
-
-### 4.2 Optimization
-- SGD
-- skipgram 모델을 baseline으로 사용
-
-### 4.3 Implemetation details
-- 300차원 사용
-
-
 
 ## 요약
 - w2v 모델과 작동방식은 같다.
