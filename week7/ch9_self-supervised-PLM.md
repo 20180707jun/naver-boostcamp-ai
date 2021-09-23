@@ -84,7 +84,6 @@
   - MNLI(Multi-Genre Natural language Inference) : 
   - QQP(Quora Question Pairs): Quora에 올라온 질문 페어가 의미적으로 동일한지 확인하는 테스크
   - QNLI(Question Natural language inference): SQuAD의 이진 분류 버전. paragraph가 answer를 포함하는지 안하는지를 확인하는 문제
-- (b) Single Sentence Classification 
   - SST-2(Stanford Sentiment Treebank) : 단문장 이진분류 문제
   - CoLA(Corpus of Linguistic Acceptability): 영어문장이 언어학적으로 acceptable한지 확인하는 이진분류문제
 
