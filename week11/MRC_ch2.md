@@ -35,4 +35,31 @@ WordPiece Tokenizer사용 예시
 입력이 2개이상의 시퀸스 일 때, (질문+지문), 각각에게 ID를 부여하여 모델이 구분해서 해석하도록 유도
 
 ### 모델 출력값
-- 정답은 문서내 존재하는 
+
+정답은 문서내 존재하는 연속된 단어토큰(span)이므로, span의 시작과 끝 위치를 알면 정답을 맞출 수 있음.  
+Extraction-based에선 답안을 생성하기 보다, 시작위치와 끝위치를 예측하도록 학습한다. 즉 Token Classification문제로 치환.  
+
+![image](https://user-images.githubusercontent.com/50571795/137651230-03927ae7-c48c-4d17-b2a9-b9155ff4ab03.png)
+
+### Fine-tuning
+
+![image](https://user-images.githubusercontent.com/50571795/137651246-45bf9fe4-b6cb-41c1-8906-70d44613aa09.png)
+
+![image](https://user-images.githubusercontent.com/50571795/137651300-d3f796d8-bc74-4c13-adea-46eb7ad06bcb.png)
+
+
+구조는 위와 같다.
+
+### Post-processing
+다음과 같은 경우 candidate list에서 제거
+- end position이 start position보다 앞에 있는 경우
+- 예측한 위치가 context를 벗어난 경우
+- 미리 설정한 max_answer_length보다 길이가 더 긴 경우
+
+**최적의 답안 찾기**
+1. Start/endpositionprediction에서 score(logits)가 가장 높은 N개를 각각 찾는다.
+2. 불가능한 start/end조합을 제거한다.
+3. 가능한 조합들을 score의 합이 큰 순서대로 정렬한다.
+4. Score가 가장 큰 조합을 최종 예측으로 선정한다.
+5. Top-k가 필요한 경우 차례대로 내보낸다.
+
